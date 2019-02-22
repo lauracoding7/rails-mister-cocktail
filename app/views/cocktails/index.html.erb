@@ -1,0 +1,13 @@
+<h1>Here are all cocktails</h1>
+<p>
+<ul>
+<% @cocktails.each do |cocktail| %>
+<li>
+<%= cocktail.name %>
+<%= link_to "Details", "http://localhost:3000/cocktails/#{cocktail.id}" %>
+</li>
+<% end %>
+</ul>
+</p>
+
+<%= link_to "Add a new cocktail?", "http://localhost:3000/cocktails/new" %>
